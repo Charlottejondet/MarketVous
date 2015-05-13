@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package MarkEtVous;
 
 /**
@@ -9,7 +7,11 @@ package MarkEtVous;
  */
 public class Spinneret
 {
-	private final static string name;
-	private static float generalAverage;
+	private final spinneretType spinneretName;
+	public Spinneret(spinneretType type){
+		this.spinneretName=type;
+	}
+	
+
 	
 }
