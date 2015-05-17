@@ -1,5 +1,6 @@
-
 package MarkEtVous;
+import java.util.ArrayList;
+
 
 /**
  * The class who define a Spinneret 
@@ -18,14 +19,23 @@ public class Spinneret
 	 */
 	private static float generalAverage;
 	
+	/**
+	 * A list of subject of a spinneret 
+	 */
+	private static ArrayList listOfSubject;
+	
 	public Spinneret(spinneretType type)
 	{
 		this.spinneretName=type;
 	}
 	
-	public void addSubject (SubjectName subject)
+	/**
+	 * The method who add a subject in the list of subject of the spinneret
+	 * @param subject : the name of the subject 
+	 */
+	public void addSubject (SubjectName subject, float coef)
 	{
-		new Subject(subject);
+		listOfSubject.add( new Subject(subject, coef));
 	}
 	
 
