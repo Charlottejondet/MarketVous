@@ -1,7 +1,7 @@
 package MarkEtVous;
 
 /**
- * An enum of all the spinneret type useful
+ * An enum of all the spinneret type available
  * @author Clément
  *
  */
