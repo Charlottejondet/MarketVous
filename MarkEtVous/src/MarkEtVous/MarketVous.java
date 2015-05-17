@@ -1,5 +1,6 @@
  package MarkEtVous;
 
-public class MarketVous {
+public class MarketVous
+{
 
 }
