@@ -9,11 +9,11 @@ public class Mark
 	/**
 	 * The value of the mark
 	 */
-	public final static float mark;
+	private static float mark;
 	/**
 	 * The coefficient of the mark
 	 */
-	public final static coefficient;
+	private static float coefficient;
 	
 	public Mark(float markNum, float coef)
 	{
