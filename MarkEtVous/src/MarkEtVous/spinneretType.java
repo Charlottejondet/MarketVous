@@ -17,6 +17,10 @@ public enum spinneretType
 	 */
 	GEA,
 	/**
+	 * The spinneret TC
+	 */
+	TC,
+	/**
 	 * The spinneret RT
 	 */
 	RT;
