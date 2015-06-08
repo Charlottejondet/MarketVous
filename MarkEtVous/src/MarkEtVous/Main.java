@@ -1,5 +1,7 @@
 package MarkEtVous;
 
+import javax.swing.SwingUtilities;
+
 
 /**
  * Launch the application Mark&Vous
