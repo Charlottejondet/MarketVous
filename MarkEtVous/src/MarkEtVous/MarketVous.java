@@ -24,6 +24,15 @@ public class MarketVous
 		this.myIHM.displayListOfMarksWithSubjects(chosenSpinneret.getListOfSubject());
 		
 	}
+	
+	public void calculateAverage()
+	{
+		Spinneret chosenSpinneret = this.myIHM.inputSpinneret();
+		for (Subject currentSubject : chosenSpinneret.getListOfSubject()) 
+		{
+			
+		}
+	}
 
 	private void inputMarks(Subject subject) 
 	{
