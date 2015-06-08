@@ -1,9 +1,13 @@
 package MarkEtVous;
 
+import java.util.ArrayList;
+
 public interface IHM {
 	
-	public void chooseSpinneret();
-	public void entryMark();
+	public Mark entryMark();
+	public Spinneret inputSpinneret();
+	public float entryCoef();
+	public boolean displayListOfMarks(ArrayList<Mark> listOfMark);
 
 
 }

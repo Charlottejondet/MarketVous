@@ -23,7 +23,7 @@ public class Subject
 	/**
 	 * A list of mark of a Subject
 	 */
-	private static ArrayList listOfMark;
+	public static ArrayList<Mark> listOfMark;
 	
 	public Subject(SubjectName subject , float coef)
 	{
@@ -31,6 +31,30 @@ public class Subject
 		this.coefficient=coef;
 	}
 	
+	public static float getAverageSubject() {
+		return averageSubject;
+	}
+
+	public static void setAverageSubject(float averageSubject) {
+		Subject.averageSubject = averageSubject;
+	}
+
+	public static ArrayList<Mark> getListOfMark() {
+		return listOfMark;
+	}
+
+	public static void setListOfMark(ArrayList<Mark> listOfMark) {
+		Subject.listOfMark = listOfMark;
+	}
+
+	public SubjectName getSubjectname() {
+		return subjectname;
+	}
+
+	public float getCoefficient() {
+		return coefficient;
+	}
+
 	/**
 	 * Add a mark in the list of mark of the Subject
 	 * @param mark : the value of the mark

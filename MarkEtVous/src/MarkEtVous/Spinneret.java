@@ -22,7 +22,7 @@ public class Spinneret
 	/**
 	 * A list of subject of a spinneret 
 	 */
-	private static ArrayList listOfSubject;
+	private ArrayList<Subject> listOfSubject;
 	
 	public Spinneret(spinneretType type)
 	{
@@ -36,6 +36,26 @@ public class Spinneret
 	public void addSubject (SubjectName subject, float coef)
 	{
 		listOfSubject.add( new Subject(subject, coef));
+	}
+
+	public static float getGeneralAverage() {
+		return generalAverage;
+	}
+
+	public static void setGeneralAverage(float generalAverage) {
+		Spinneret.generalAverage = generalAverage;
+	}
+
+	public ArrayList<Subject> getListOfSubject() {
+		return listOfSubject;
+	}
+
+	public static void setListOfSubject(ArrayList listOfSubject) {
+		Spinneret.listOfSubject = listOfSubject;
+	}
+
+	public spinneretType getSpinneretName() {
+		return spinneretName;
 	}
 	
 
