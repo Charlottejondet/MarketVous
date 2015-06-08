@@ -13,30 +13,30 @@ public class MarketVous
 		this.myIHM=ihm;	
 	}
 	
-	public void addMarks(){
+	public void addMarks()
+	{
 		Spinneret chosenSpinneret = this.myIHM.inputSpinneret();
-		for (Subject currentSubject : chosenSpinneret.getListOfSubject()) {
-			boolean continueInput = true;
-			while (continueInput) {
-				currentSubject.getListOfMark().add(this.myIHM.entryMark());
-				continueInput = this.myIHM.askContinue();
+		for (Subject currentSubject : chosenSpinneret.getListOfSubject()) 
+		{
+			boolean continueAdd = true;
+			if(continueAdd)
+			{
+				this.switchSubject(currentSubject);
 			}
+			
 			boolean answer = this.myIHM.displayListOfMarks(currentSubject.getListOfMark());
 			
 		}
 		
-		List<> listeDeNote = new List();
-		Subject.listOfMark.add(str)
-		
-		
-		listeDeNote.add(str);
-		Average(listeDeNote[],2);
 	}
-	public int Average(List notes, int coeff)
+
+	private void switchSubject(Subject subject) 
 	{
-		for(int i = 0; i < notes.size(); i++)
+		boolean continueInput = true;
+		while (continueInput) 
 		{
-			System.out.println(notes.get(i));
+			subject.getListOfMark().add(this.myIHM.entryMark());
+			continueInput = this.myIHM.askContinue();
 		}
 	}
 }

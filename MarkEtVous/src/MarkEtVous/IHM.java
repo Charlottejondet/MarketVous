@@ -8,6 +8,7 @@ public interface IHM {
 	public Spinneret inputSpinneret();
 	public float entryCoef();
 	public boolean displayListOfMarks(ArrayList<Mark> listOfMark);
+	public boolean askContinue();
 
 
 }

@@ -30,6 +30,13 @@ public class ConsoleIHM implements IHM{
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+
+	@Override
+	public boolean askContinue() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 	
 
