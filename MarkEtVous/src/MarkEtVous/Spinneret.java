@@ -50,8 +50,8 @@ public class Spinneret
 		return listOfSubject;
 	}
 
-	public static void setListOfSubject(ArrayList listOfSubject) {
-		Spinneret.listOfSubject = listOfSubject;
+	public void setListOfSubject(ArrayList<Subject> listOfSubject) {
+		this.listOfSubject = listOfSubject;
 	}
 
 	public spinneretType getSpinneretName() {
