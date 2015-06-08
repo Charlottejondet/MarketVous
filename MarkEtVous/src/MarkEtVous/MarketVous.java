@@ -12,11 +12,15 @@ public class MarketVous
 		String str = sc.nextLine();
 		List listeDeNote = new List();
 		listeDeNote.add(str);
+		Average(listeDeNote[],2);
 		
 	}
 	
-	public int average(List notes)
+	public int Average(List notes, int coeff)
 	{
-		return 0;
+		for(int i = 0; i < notes.size(); i++)
+		{
+			System.out.println(notes.get(i));
+		}
 	}
 }
