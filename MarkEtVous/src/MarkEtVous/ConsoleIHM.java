@@ -11,14 +11,16 @@ public class ConsoleIHM implements IHM{
 
 
 	@Override
-	public Spinneret inputSpinneret() {
+	public Spinneret inputSpinneret() 
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 
 	@Override
-	public float entryCoef() {
+	public float entryCoef() 
+	{
 		coe = new Scanner(System.in);
 		System.out.println("entrez le coefficient de la note");
 		float str = coe.nextFloat();
@@ -26,25 +28,26 @@ public class ConsoleIHM implements IHM{
 	}
 
 	@Override
-	public int entryMark() 
+	public float entryMark() 
 	{
 		sc = new Scanner(System.in);
 		System.out.println("entrez la note");
-		int str = sc.nextInt();
+		float str = sc.nextFloat();
 		return str;
 	}
 
 	@Override
-	public void displayListOfMarks(ArrayList<Mark> listOfMark) {
+	public void displayListOfMarks(ArrayList<Mark> listOfMark) 
+	{
 		// TODO Auto-generated method stub
 		
 	}
 
 
 	@Override
-	public boolean askContinue() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean askContinue() 
+	{
+		return true;
 	}
 
 
