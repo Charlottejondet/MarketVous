@@ -13,7 +13,8 @@ public class Main {
 	public static void main(String[] args) 
 	{
 		IHM myIHM = new ConsoleIHM();
-		new MarketVous(myIHM);
+		MarketVous application = new MarketVous(myIHM);
+		application.addMarks();
 		
 	}
 

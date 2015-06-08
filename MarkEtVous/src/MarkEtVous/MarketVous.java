@@ -11,6 +11,7 @@ public class MarketVous
 	public MarketVous(IHM ihm) 
 	{
 		this.myIHM=ihm;	
+		Spinneret INFO=new Spinneret(spinneretType.INFO);
 	}
 	
 	public void addMarks()

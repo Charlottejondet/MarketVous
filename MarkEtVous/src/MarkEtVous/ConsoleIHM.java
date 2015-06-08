@@ -14,9 +14,46 @@ public class ConsoleIHM implements IHM
 	@Override
 	public Spinneret inputSpinneret() 
 	{
-		// TODO Auto-generated method stub
-		return null;
+		sc = new Scanner(System.in);
+		System.out.println(" 1 : INFO\n 2 : GEA\n 3 : TC \n 4 : RT \n ");
+		System.out.println("Choississez votre filière");
+		String string ="";
+		do {
+			string = sc.nextLine();
+		} while (!this.isNumeric(string));
+		int type = Integer.parseInt(string);
+		if (type==1)
+		{
+			return new Spinneret(spinneretType.INFO);
+		}
+		else if (type==2)
+		{
+			return new Spinneret(spinneretType.GEA);
+		}
+		else if (type==3)
+		{
+			return new Spinneret(spinneretType.TC);
+		}
+		else if (type==4)
+		{
+			return new Spinneret(spinneretType.RT);
+		}
+		return inputSpinneret();
+				
 	}
+		
+
+
+	public boolean isNumeric(String string){
+		try {
+			int value = Integer.parseInt(string);
+			
+		} catch (Exception e) {
+			return false;
+		}
+		return true;
+	}
+
 
 
 	@Override
