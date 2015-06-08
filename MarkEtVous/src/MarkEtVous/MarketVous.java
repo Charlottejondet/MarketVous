@@ -5,11 +5,13 @@ import java.util.Scanner;
 
 public class MarketVous
 {
+	
+	IHM myIHM = new consoleIHM();
+	
 	public MarketVous() 
+	
 	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Veuillez saisir une note :");
-		String str = sc.nextLine();
+		this.myIHM.entryMark();
 		List listeDeNote = new List();
 		listeDeNote.add(str);
 		Average(listeDeNote[],2);
