@@ -66,8 +66,7 @@ public class Spinneret
 
 	public static void addGeneralAverageBySpinneret(float generalAverage) 
 	{
-		// TODO Auto-generated method stub
-		
+		listOfGeneralAverageBySpinneret.add(generalAverage);		
 	}
 	
 
