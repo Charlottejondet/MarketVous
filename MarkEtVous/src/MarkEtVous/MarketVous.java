@@ -34,6 +34,7 @@ public class MarketVous
 		}
 		
 		calculateGeneralAverage();
+		this.myIHM.displaySummaryOfAverage();
 		
 	}
 	

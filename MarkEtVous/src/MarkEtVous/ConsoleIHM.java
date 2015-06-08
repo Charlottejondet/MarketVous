@@ -66,6 +66,13 @@ public class ConsoleIHM implements IHM
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+
+	@Override
+	public void displaySummaryOfAverage() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 

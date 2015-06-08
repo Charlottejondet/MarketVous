@@ -12,6 +12,7 @@ public interface IHM
 	public boolean askContinue();
 	public void displayListOfMarksWithSubjects(ArrayList<Subject> listOfSubject);
 	public boolean validateCalculation();
+	public void displaySummaryOfAverage();
 
 
 }
