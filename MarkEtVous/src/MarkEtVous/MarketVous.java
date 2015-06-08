@@ -18,25 +18,23 @@ public class MarketVous
 		Spinneret chosenSpinneret = this.myIHM.inputSpinneret();
 		for (Subject currentSubject : chosenSpinneret.getListOfSubject()) 
 		{
-			boolean continueAdd = true;
-			if(continueAdd)
-			{
-				this.switchSubject(currentSubject);
-			}
-			
-			boolean answer = this.myIHM.displayListOfMarks(currentSubject.getListOfMark());
-			
+			this.inputMarks(currentSubject);
+			this.myIHM.displayListOfMarks(currentSubject.getListOfMark());			
 		}
+		this.myIHM.displayListOfMarksWithSubjects(chosenSpinneret.getListOfSubject());
 		
 	}
 
-	private void switchSubject(Subject subject) 
+	private void inputMarks(Subject subject) 
 	{
 		boolean continueInput = true;
 		while (continueInput) 
 		{
 			subject.getListOfMark().add(this.myIHM.entryMark());
 			continueInput = this.myIHM.askContinue();
+			if (continueInput){
+				this.inputMarks(subject);
+			}
 		}
 	}
 }

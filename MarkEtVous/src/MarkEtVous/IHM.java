@@ -9,6 +9,7 @@ public interface IHM {
 	public float entryCoef();
 	public boolean displayListOfMarks(ArrayList<Mark> listOfMark);
 	public boolean askContinue();
+	public void displayListOfMarksWithSubjects(ArrayList<Subject> listOfSubject);
 
 
 }
