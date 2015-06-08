@@ -11,6 +11,7 @@ public interface IHM
 	public void displayListOfMarks(ArrayList<Mark> listOfMark);
 	public boolean askContinue();
 	public void displayListOfMarksWithSubjects(ArrayList<Subject> listOfSubject);
+	public boolean validateCalculation();
 
 
 }

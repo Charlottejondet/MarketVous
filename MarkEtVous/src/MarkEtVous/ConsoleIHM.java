@@ -59,6 +59,13 @@ public class ConsoleIHM implements IHM
 		// TODO Auto-generated method stub
 		
 	}
+
+
+	@Override
+	public boolean validateCalculation() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 	
 
