@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class ConsoleIHM implements IHM{
 
 
+	private Scanner coe;
+	private Scanner sc;
+
+
 	@Override
 	public Spinneret inputSpinneret() {
 		// TODO Auto-generated method stub
@@ -15,20 +19,25 @@ public class ConsoleIHM implements IHM{
 
 	@Override
 	public float entryCoef() {
-		// TODO Auto-generated method stub
-		return 0;
+		coe = new Scanner(System.in);
+		System.out.println("entrez le coefficient de la note");
+		float str = coe.nextFloat();
+		return str;
 	}
 
 	@Override
-	public Mark entryMark() {
-		// TODO Auto-generated method stub
-		return null;
+	public int entryMark() 
+	{
+		sc = new Scanner(System.in);
+		System.out.println("entrez la note");
+		int str = sc.nextInt();
+		return str;
 	}
 
 	@Override
-	public boolean displayListOfMarks(ArrayList<Mark> listOfMark) {
+	public void displayListOfMarks(ArrayList<Mark> listOfMark) {
 		// TODO Auto-generated method stub
-		return false;
+		
 	}
 
 
