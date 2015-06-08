@@ -14,6 +14,7 @@ public class Main {
 	{
 		IHM myIHM = new ConsoleIHM();
 		new MarketVous(myIHM);
+		SwingUtilities.invokeLater(new WindowMarketVous());
 		
 	}
 
