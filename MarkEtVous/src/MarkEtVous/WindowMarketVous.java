@@ -14,7 +14,6 @@ public class WindowMarketVous extends JFrame implements Runnable
 		fenetre.setSize(900, 500);
 	}
 
-
 }
 
 
