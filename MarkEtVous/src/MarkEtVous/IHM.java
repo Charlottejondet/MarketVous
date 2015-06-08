@@ -2,8 +2,6 @@ package MarkEtVous;
 
 import java.util.ArrayList;
 
-import javax.swing.JFrame;
-
 public interface IHM {
 	
 	public float entryMark();
