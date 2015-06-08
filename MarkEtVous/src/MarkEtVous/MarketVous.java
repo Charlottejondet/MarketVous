@@ -30,7 +30,32 @@ public class MarketVous
 		Spinneret chosenSpinneret = this.myIHM.inputSpinneret();
 		for (Subject currentSubject : chosenSpinneret.getListOfSubject()) 
 		{
+			float subjectAverage = 0;
+			float countCoef=0;
+			for (Mark currentMark : currentSubject.getListOfMark())
+			{
+				subjectAverage=subjectAverage + (currentMark.getMark()*currentMark.getCoefficient());
+				countCoef= countCoef + currentMark.getCoefficient();
+			}
+			if (countCoef !=0 )
+			{
+				subjectAverage=subjectAverage/countCoef;
+				Subject.addAverageSubject(subjectAverage, currentSubject.getCoefficient());
+			}
 			
+			
+		}
+		float generalAverage=0;
+		float countGeneralCoef=0;
+		for (Mark currentSubjectAverage : Subject.getListOfAverageBySubject())
+		{
+			generalAverage=generalAverage+ (currentSubjectAverage.getMark()*currentSubjectAverage.getCoefficient());
+			countGeneralCoef=countGeneralCoef+ currentSubjectAverage.getCoefficient();
+		}
+		if (countGeneralCoef != 0)
+		{
+			generalAverage=generalAverage/countGeneralCoef;
+			Spinneret.addGeneralAverageBySpinneret(generalAverage);
 		}
 	}
 

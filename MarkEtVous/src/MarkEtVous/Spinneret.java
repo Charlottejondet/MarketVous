@@ -24,6 +24,8 @@ public class Spinneret
 	 */
 	private ArrayList<Subject> listOfSubject;
 	
+	public static ArrayList listOfGeneralAverageBySpinneret;
+	
 	public Spinneret(spinneretType type)
 	{
 		this.spinneretName=type;
@@ -38,11 +40,13 @@ public class Spinneret
 		listOfSubject.add( new Subject(subject, coef));
 	}
 
-	public static float getGeneralAverage() {
+	public static float getGeneralAverage()
+	{
 		return generalAverage;
 	}
 
-	public static void setGeneralAverage(float generalAverage) {
+	public static void setGeneralAverage(float generalAverage)
+	{
 		Spinneret.generalAverage = generalAverage;
 	}
 
@@ -50,12 +54,20 @@ public class Spinneret
 		return listOfSubject;
 	}
 
-	public void setListOfSubject(ArrayList<Subject> listOfSubject) {
+	public void setListOfSubject(ArrayList<Subject> listOfSubject)
+	{
 		this.listOfSubject = listOfSubject;
 	}
 
-	public spinneretType getSpinneretName() {
+	public spinneretType getSpinneretName()
+	{
 		return spinneretName;
+	}
+
+	public static void addGeneralAverageBySpinneret(float generalAverage) 
+	{
+		// TODO Auto-generated method stub
+		
 	}
 	
 

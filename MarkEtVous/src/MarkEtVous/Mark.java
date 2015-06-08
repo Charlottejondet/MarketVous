@@ -20,4 +20,22 @@ public class Mark
 		this.mark=markNum;
 		this.coefficient=coef;
 	}
+
+	public static float getMark() {
+		return mark;
+	}
+
+	public static void setMark(float mark) {
+		Mark.mark = mark;
+	}
+
+	public static float getCoefficient() {
+		return coefficient;
+	}
+
+	public static void setCoefficient(float coefficient) {
+		Mark.coefficient = coefficient;
+	}
+	
+	
 }

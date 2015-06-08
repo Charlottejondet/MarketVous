@@ -25,6 +25,8 @@ public class Subject
 	 */
 	public static ArrayList<Mark> listOfMark;
 	
+	public static ArrayList<Mark> listOfAverageBySubject;
+	
 	public Subject(SubjectName subject , float coef)
 	{
 		this.subjectname=subject;
@@ -62,6 +64,21 @@ public class Subject
 	public void addMark (float mark,float coef)
 	{
 		listOfMark.add( new Mark(mark,coef));
+	}
+	
+	public static void addAverageSubject(float mark, float coef)
+	{
+		listOfAverageBySubject.add( new Mark(mark,coef));
+	}
+
+	public static ArrayList<Mark> getListOfAverageBySubject() 
+	{
+		return listOfAverageBySubject;
+	}
+
+	public static void setListOfAverageBySubject(ArrayList<Mark> listOfAverageBySubject) 
+	{
+		Subject.listOfAverageBySubject = listOfAverageBySubject;
 	}
 	
 }
