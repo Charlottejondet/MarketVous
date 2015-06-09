@@ -3,6 +3,11 @@ package MarkEtVous;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
+import MarkEtVous.model.MarketVous;
+import MarkEtVous.view.IHM;
+import MarkEtVous.view.console.ConsoleIHM;
+import MarkEtVous.view.gui.WindowMarketVous;
+
 
 /**
  * Launch the application Mark&Vous
@@ -16,13 +21,10 @@ public class Main {
 	public static void main(String[] args) 
 	{	    
 		IHM myIHM = new ConsoleIHM();
-//<<<<<<< HEAD
 		new MarketVous(myIHM);
 		fenetre = new WindowMarketVous();	
-//=======
 		MarketVous application = new MarketVous(myIHM);
-		application.addMarks();
-//>>>>>>> branch 'master' of https://github.com/Charlottejondet/MarketVous.git
+		application.start();
 	}
 
 }

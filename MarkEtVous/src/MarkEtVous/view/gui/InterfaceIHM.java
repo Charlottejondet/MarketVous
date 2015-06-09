@@ -1,6 +1,11 @@
-package MarkEtVous;
+package MarkEtVous.view.gui;
 
 import java.util.ArrayList;
+
+import MarkEtVous.model.Mark;
+import MarkEtVous.model.Spinneret;
+import MarkEtVous.model.Subject;
+import MarkEtVous.view.IHM;
 
 public class InterfaceIHM implements IHM {
 

@@ -1,7 +1,1 @@
-Mathématiques,4/Culture-Communication,2/Anglais,2/Projet personnel et professionnel,1/Apprendre autrement,1/Informatique,6/Electronique,6/Télécommunications,4/Réseaux,4
-
-Mathématiques,3/Physique,2/Culture-Communication,2/Projet personnel et professionnel,1/Anglais,2/Informatique,5/Electronique,2/Apprendre autrement,1/Télécommunications,6/Réseaux,6
-
-Mathématiques,2/Physique,2/Culture-Communication,2/Projet personnel et professionnel,1/Anglais,2/Connaissance de l'entreprise,1/Informatique,4/Electronique,4/Télécommunications-Réseaux,10/Module complémentaire,2
-
 Formation scientifique et humaine module 1,2/Formation scientifique et humaine module 2,2/Formation scientifique et humaine module 3,2/Formation scientifique et humaine module 4,2/Formation scientifique et humaine module 5,2/Informatique et électronique module 1,2/Informatique et électronique module 2,2/Informatique et électronique module 3,2/Informatique et électronique module 4,2/Informatique et électronique module 5,2/Télécommunications et réseaux module 1,2/Télécommunications et réseaux module 2,2/Télécommunications et réseaux module 3,2/Télécommunications et réseaux module 4,2/Télécommunications et réseaux module 5,2/Projets tuteurés,3/Stages,12

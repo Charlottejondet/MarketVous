@@ -1,4 +1,4 @@
-package MarkEtVous;
+package MarkEtVous.model;
 
 /**
  * The class who define a Student
@@ -12,7 +12,7 @@ public class Student
 	 */
 	private Spinneret spinneretType;
 	
-	public Student(spinneretType type) 
+	public Student(SpinneretType type) 
 	{
 		this.spinneretType=new Spinneret(type);
 	}

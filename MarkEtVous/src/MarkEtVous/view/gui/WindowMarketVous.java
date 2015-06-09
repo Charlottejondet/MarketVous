@@ -1,4 +1,4 @@
-package MarkEtVous;
+package MarkEtVous.view.gui;
 
 
 
@@ -26,13 +26,15 @@ public class WindowMarketVous extends JFrame
 		this.setSize(900, 500);
 		this.setVisible(true);
 		JPanel background= new JPanel();
-		background.setBackground(Color.CYAN);
+		background.setBackground(Color.WHITE);
 		this.add(background);
 		
 		button1.setPreferredSize(new Dimension(65, 30));
 		button2.setPreferredSize(new Dimension(65, 30));
 		button3.setPreferredSize(new Dimension(65, 30));
 		button4.setPreferredSize(new Dimension(65, 30));
+		
+		
 	}
 
 }
