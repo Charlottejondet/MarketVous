@@ -10,24 +10,17 @@ public class Subject
 {
 	
 	private final File infos1;
-
-	private final File infos3;
-	private final File infos4;
 	
-	private final File geas1;
-	private final File geas2;
-	private final File geas3;
-	private final File geas4;
+	public subjectOfSPinneretInfo(File info)
+	{
+		this.infos1=info;
+	}
 	
-	private final File tcs1;
-	private final File tcs2;
-	private final File tcs3;
-	private final File tcs4;
 	
-	private final File rts1;
-	private final File rts2;
-	private final File rts3;
-	private final File rts4;
+	
+	
+	
+	
 	/**
 	 * The name of the subject
 	 */
