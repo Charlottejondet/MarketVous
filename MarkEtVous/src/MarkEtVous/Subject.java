@@ -1,4 +1,5 @@
 package MarkEtVous;
+import java.io.File;
 import java.util.ArrayList;
 /**
  * The class who define a Subject
@@ -7,6 +8,19 @@ import java.util.ArrayList;
  */
 public class Subject 
 {
+	
+	private final File infos1;
+	
+	public subjectOfSPinneretInfo(File info)
+	{
+		this.infos1=info;
+	}
+	
+	
+	
+	
+	
+	
 	/**
 	 * The name of the subject
 	 */

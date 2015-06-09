@@ -1,5 +1,6 @@
 package MarkEtVous;
 
+import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 
@@ -10,13 +11,18 @@ import javax.swing.SwingUtilities;
  */
 public class Main {
 
-	
-	
+	private static WindowMarketVous fenetre;
+
 	public static void main(String[] args) 
-	{
+	{	    
 		IHM myIHM = new ConsoleIHM();
+//<<<<<<< HEAD
 		new MarketVous(myIHM);
-		SwingUtilities.invokeLater(new WindowMarketVous());	
+		fenetre = new WindowMarketVous();	
+//=======
+		MarketVous application = new MarketVous(myIHM);
+		application.addMarks();
+//>>>>>>> branch 'master' of https://github.com/Charlottejondet/MarketVous.git
 	}
 
 }

@@ -11,6 +11,7 @@ public class MarketVous
 	public MarketVous(IHM ihm) 
 	{
 		this.myIHM=ihm;	
+		Spinneret INFO=new Spinneret(spinneretType.INFO);
 	}
 	
 	public void addMarks()
@@ -30,21 +31,16 @@ public class MarketVous
 		Spinneret chosenSpinneret = this.myIHM.inputSpinneret();
 		for (Subject currentSubject : chosenSpinneret.getListOfSubject()) 
 		{
-			float subjectAverage = 0;
-			float countCoef=0;
-			for (Mark currentMark : currentSubject.getListOfMark())
-			{
-				subjectAverage=subjectAverage + (currentMark.getMark()*currentMark.getCoefficient());
-				countCoef= countCoef + currentMark.getCoefficient();
-			}
-			if (countCoef !=0 )
-			{
-				subjectAverage=subjectAverage/countCoef;
-				Subject.addAverageSubject(subjectAverage, currentSubject.getCoefficient());
-			}
-			
-			
+			calculateAverageSubject(currentSubject);						
 		}
+		
+		calculateGeneralAverage();
+		this.myIHM.displaySummaryOfAverage();
+		
+	}
+	
+	private void calculateGeneralAverage()
+	{
 		float generalAverage=0;
 		float countGeneralCoef=0;
 		for (Mark currentSubjectAverage : Subject.getListOfAverageBySubject())
@@ -58,13 +54,34 @@ public class MarketVous
 			Spinneret.addGeneralAverageBySpinneret(generalAverage);
 		}
 	}
+	
+	private void calculateAverageSubject(Subject subject)
+	{
+		boolean continueCalculateAverage = this.myIHM.validateCalculation();
+		while (continueCalculateAverage)
+		{
+			float subjectAverage = 0;
+			float countCoef=0;
+			for (Mark currentMark : subject.getListOfMark())
+			{
+				subjectAverage=subjectAverage + (currentMark.getMark()*currentMark.getCoefficient());
+				countCoef= countCoef + currentMark.getCoefficient();
+			}
+			if (countCoef !=0 )
+			{
+				subjectAverage=subjectAverage/countCoef;
+				Subject.addAverageSubject(subjectAverage, subject.getCoefficient());
+			}
+		}
+		
+	}
 
 	private void inputMarks(Subject subject) 
 	{
 		boolean continueInput = true;
 		while (continueInput) 
 		{
-			subject.getListOfMark().add(this.myIHM.entryMark());
+			subject.addMark(this.myIHM.entryMark(),this.myIHM.entryCoef());
 			continueInput = this.myIHM.askContinue();
 			if (continueInput){
 				this.inputMarks(subject);

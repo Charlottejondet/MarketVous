@@ -3,19 +3,59 @@ package MarkEtVous;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ConsoleIHM implements IHM{
-
-
+public class ConsoleIHM implements IHM
+{
 	private Scanner coe;
 	private Scanner sc;
+	private int value;
 
 
 	@Override
 	public Spinneret inputSpinneret() 
 	{
-		// TODO Auto-generated method stub
-		return null;
+//<<<<<<< HEAD
+//=======
+		sc = new Scanner (System.in);
+		System.out.println(" 1 : INFO\n 2 : GEA\n 3 : TC \n 4 : RT \n ");
+		System.out.println("Choississez votre filière");
+		String string ="";
+		do {
+			string = sc.nextLine();
+		} while (!this.isNumeric(string));
+		int type = Integer.parseInt(string);
+		if (type==1)
+		{
+			return new Spinneret(spinneretType.INFO);
+		}
+		else if (type==2)
+		{
+			return new Spinneret(spinneretType.GEA);
+		}
+		else if (type==3)
+		{
+			return new Spinneret(spinneretType.TC);
+		}
+		else if (type==4)
+		{
+			return new Spinneret(spinneretType.RT);
+		}
+		return inputSpinneret();
+				
 	}
+		
+
+
+	public boolean isNumeric(String string){
+		try {
+			value = Integer.parseInt(string);
+			
+		} catch (Exception e) {
+			return false;
+		}
+		return true;
+//>>>>>>> branch 'master' of https://github.com/Charlottejondet/MarketVous.git
+	}
+
 
 
 	@Override
@@ -47,13 +87,33 @@ public class ConsoleIHM implements IHM{
 	@Override
 	public boolean askContinue() 
 	{
+//<<<<<<< HEAD
 		return true;
+//=======
+		// TODO Auto-generated method stub
+//>>>>>>> branch 'master' of https://github.com/Charlottejondet/MarketVous.git
 	}
 
 
 	@Override
-	public void displayListOfMarksWithSubjects(ArrayList<Subject> listOfSubject) {
+	public void displayListOfMarksWithSubjects(ArrayList<Subject> listOfSubject) 
+	{
 		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public boolean validateCalculation() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public void displaySummaryOfAverage() {
+		// TODO Auto-generated method stub
+		
 		
 	}
 	
