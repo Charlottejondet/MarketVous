@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 public class ConsoleIHM implements IHM
 {
-
-
 	private Scanner coe;
 	private Scanner sc;
 
