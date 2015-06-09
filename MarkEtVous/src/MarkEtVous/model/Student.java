@@ -14,7 +14,7 @@ public class Student
 	
 	public Student(SpinneretType type) 
 	{
-		this.spinneretType=new Spinneret(type);
+		this.spinneretType=new Spinneret(type, null);
 	}
 	
 }

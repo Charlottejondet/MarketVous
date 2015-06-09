@@ -24,5 +24,8 @@ public interface IHM
 	public void displaySubjectAverage(Subject subject);
 	public void displayGeneralAverage(Spinneret spinneret);
 	public int menu();
+	Spinneret inputSpinneret();
+	void displayListOfMarks(ArrayList<Mark> listOfMark);
+	void displayListOfMarksWithSubjects(ArrayList<Subject> listOfSubject);
 	
 }

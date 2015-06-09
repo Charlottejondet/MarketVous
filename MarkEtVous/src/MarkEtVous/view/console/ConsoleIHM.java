@@ -237,6 +237,30 @@ public class ConsoleIHM implements IHM
 		}
 		return this.menu();
 	}
+
+
+
+	@Override
+	public Spinneret inputSpinneret() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public void displayListOfMarks(ArrayList<Mark> listOfMark) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void displayListOfMarksWithSubjects(ArrayList<Subject> listOfSubject) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 
