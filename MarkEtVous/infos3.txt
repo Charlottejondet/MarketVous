@@ -1,1 +1,1 @@
-Principes des systèmes d'exploitation%2/Services réseaux%1/Algorithmique avancée%1/Programmation Web coté serveur%2/Conception et programmation objet avancées%2/Bases de données avancées%1
+Systèmes d'exploitation%2/Services réseaux%1/Algorithmique %1/Programmation Web%2/Programmation objet avancées%2/Bases de données%1

@@ -1,5 +1,4 @@
 package MarkEtVous.view.gui;
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -25,20 +24,38 @@ import MarkEtVous.model.SpinneretType;
 import MarkEtVous.model.Subject;
 import MarkEtVous.view.IHM;
 
-
-
-
+/**
+ * @author Jondet Guezel Coste Litzenburger
+ *
+ */
 public class MenuMarketVous extends JFrame implements IHM, Runnable, ActionListener
 {
 
 	
+	/**
+	 * Serial Version UID
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Jcombobox of different spinneret
+	 */
 	private JComboBox<Object> spinneret;
-	private JRadioButton semester;
+	/**
+	 * JButton entrymark
+	 */
 	private JButton entryMark;
+	/**
+	 * Jbutton close
+	 */
 	private JButton close;
+	/**
+	 * MarketVous
+	 */
 	private MarketVous marketvous;
 
+	/**
+	 * Constructor of menu MarketVous
+	 */
 	public MenuMarketVous() {
 		this.setTitle("Mark&Vous");
 		this.setSize(600, 700);

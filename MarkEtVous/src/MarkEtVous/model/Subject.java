@@ -3,7 +3,7 @@ import java.io.File;
 import java.util.ArrayList;
 /**
  * The class who define a Subject
- * @author Clément
+ * @author Jondet Guezel Coste Litzenburger
  *
  */
 public class Subject 
@@ -29,6 +29,11 @@ public class Subject
 	
 	
 	
+	/**
+	 * Constructor of subject
+	 * @param subject
+	 * @param coef
+	 */
 	public Subject(String subject , float coef)
 	{
 		this.listOfMark=new ArrayList<Mark>();
@@ -36,26 +41,49 @@ public class Subject
 		this.coefficient=coef;
 	}
 	
+	/**
+	 * Getter of average subject
+	 * @return
+	 */
 	public  float getAverageSubject() {
 		return averageSubject;
 	}
 
+	/**
+	 * Setter of average subject
+	 * @param averageSubject
+	 */
 	public void setAverageSubject(float averageSubject) {
 		this.averageSubject = averageSubject;
 	}
 
+	/**
+	 * Getter of list of mark
+	 * @return listOfMark
+	 */
 	public ArrayList<Mark> getListOfMark() {
 		return listOfMark;
 	}
 
+	/**
+	 * Setter of list of mark
+	 * @param listOfMark
+	 */
 	public void setListOfMark(ArrayList<Mark> listOfMark) {
 		this.listOfMark = listOfMark;
 	}
 
+	/**
+	 * Getter of subject name
+	 * @return subjectname
+	 */
 	public String getSubjectname() {
 		return subjectname;
 	}
 
+	/** Getter of coefficient
+	 * @return coefficient
+	 */
 	public float getCoefficient() {
 		return coefficient;
 	}

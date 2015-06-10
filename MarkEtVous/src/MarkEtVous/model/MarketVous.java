@@ -9,40 +9,56 @@ import MarkEtVous.view.IHM;
 public class MarketVous
 {
 	
+	/**
+	 * Variable of MyIHM
+	 */
 	private IHM myIHM;
 	
+	/**
+	 * Spinneret
+	 */
 	private Spinneret spinneret;
 	
+	/**
+	 * Constructor of MarketVous
+	 * @param ihm
+	 */
 	public MarketVous(IHM ihm) 
 	{
 		this.myIHM=ihm;	
 	}
 	
+	/**
+	 * Method addMarks, which run with spinneret choose of user. Thanks to this method, wa can add for each subject, new marks 
+	 */
 	public void addMarks()
 	{
 		SpinneretType choosenSpinneret = this.myIHM.inputTitleSpinneret();
 		if (choosenSpinneret!=null){
 		File fileSpinneret = this.myIHM.inputSemester(choosenSpinneret);
-		
-			this.spinneret= new Spinneret(choosenSpinneret, fileSpinneret);
-			int index =0;
-			for (index=0; index < this.spinneret.getListOfSubject().size();index++) 
-			{
-				Subject currentSubject = this.spinneret.getListOfSubject().get(index);
-				if(!this.inputMarks(currentSubject))
-					break;
-				this.myIHM.displayListOfMarks(currentSubject.getListOfMark());	
-					
+			if (fileSpinneret!=null) {
+				this.spinneret= new Spinneret(choosenSpinneret, fileSpinneret);
+				int index =0;
+				for (index=0; index < this.spinneret.getListOfSubject().size();index++) 
+				{
+					Subject currentSubject = this.spinneret.getListOfSubject().get(index);
+					if(!this.inputMarks(currentSubject))
+						break;
+					this.myIHM.displayListOfMarks(currentSubject.getListOfMark());	
+						
+				}
+				if (index ==this.spinneret.getListOfSubject().size()) {
+					this.myIHM.displayListOfMarksWithSubjects(this.spinneret.getListOfSubject());
+					this.calculateAverage();
+				}
 			}
-			if (index ==this.spinneret.getListOfSubject().size()) {
-				this.myIHM.displayListOfMarksWithSubjects(this.spinneret.getListOfSubject());
-				this.calculateAverage();
-			}
-
 		}
 	}
 		
 	
+	/**
+	 * Method which group calculate of all averages
+	 */
 	public void calculateAverage()
 	{
 		for (Subject currentSubject : this.spinneret.getListOfSubject()) 
@@ -55,6 +71,9 @@ public class MarketVous
 		
 	}
 	
+	/**
+	 * Method calculateGeneralAverage which calculate general average
+	 */
 	private void calculateGeneralAverage()
 	{
 		float generalSum=0;
@@ -71,6 +90,10 @@ public class MarketVous
 		}
 	}
 	
+	/**
+	 * Method calculateAverage which allows to calculate all of average subject
+	 * @param subject
+	 */
 	private void calculateAverageSubject(Subject subject)
 	{
 
@@ -90,6 +113,11 @@ public class MarketVous
 		
 	}
 
+	/**
+	 * Boolean to continue input mark
+	 * @param subject
+	 * @return true when user want continue to input mark, else false
+	 */
 	private boolean inputMarks(Subject subject) 
 	{
 		boolean continueInput = true;
@@ -114,6 +142,9 @@ public class MarketVous
 		return true;
 	}
 
+	/**
+	 * Stater
+	 */
 	public void start() {
 		int choice = this.myIHM.menu();
 		if (choice==1){

@@ -1,8 +1,5 @@
 /**
- * 
+ * @autor Jondet Guezel Coste Litzenburger
  */
-/**
- * @author Charlotte
- *
- */
+
 package MarkEtVous.view;

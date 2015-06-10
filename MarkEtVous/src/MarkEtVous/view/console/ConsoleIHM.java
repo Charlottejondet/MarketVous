@@ -12,12 +12,30 @@ import MarkEtVous.model.Subject;
 import MarkEtVous.model.SpinneretType;
 import MarkEtVous.view.IHM;
 
+/**
+ * @author Jondet Guezel Coste Litzenburger
+ *
+ */
 public class ConsoleIHM implements IHM
 {
+	/**
+	 * Scanner of coefficient
+	 */
 	private Scanner coe;
+	/**
+	 * Scanner 
+	 */
 	private Scanner sc;
+	/**
+	 * Value
+	 */
 	private int value;
 
+	/**
+	 * Method which allows if value is Numeric or not
+	 * @param string
+	 * @return true: is Numeric, false: is not numeric -> exception
+	 */
 	public boolean isNumeric(String string){
 		try {
 			value = Integer.parseInt(string);

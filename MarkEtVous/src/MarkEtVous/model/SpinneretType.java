@@ -2,7 +2,7 @@ package MarkEtVous.model;
 
 /**
  * An enum of all the spinneret type available
- * @author Clément
+ * @author Jondet Guezel Coste Litzenburger
  *
  */
 public enum SpinneretType 
@@ -25,8 +25,15 @@ public enum SpinneretType
 	 */
 	RT("rts");
 	
+	/**
+	 * representation of spinneret
+	 */
 	private String representation;
 
+	/** 
+	 * Constructor or spinneret type
+	 * @param repr
+	 */
 	private SpinneretType(String repr) {
 		this.representation = repr;
 	}

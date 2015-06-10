@@ -9,13 +9,37 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+/**
+ * @author Jondet Guezel Coste Litzenburger
+ */
 public class EntryCoefDialog extends JDialog implements ActionListener {
+	
+	
+	
+	/**
+	 * Serial version UID
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * JButton validate
+	 */
 	private JButton validate;
+	/**
+	 * JButton close
+	 */
 	private JButton close;
+	/**
+	 * JTextFiel coefInput
+	 */
 	private JTextField coefInput;
+	/**
+	 * Coefficient
+	 */
 	private float coef;
 	
+	/**
+	 * Constructor entryCoefDialog, which allow to entry coef of each mark
+	 */
 	public EntryCoefDialog() {
 		this.setModal(true);
 		this.setSize(350, 300);
@@ -25,12 +49,12 @@ public class EntryCoefDialog extends JDialog implements ActionListener {
 		
 		this.setLayout(null);
 		JLabel title = new JLabel("Veuillez saisir le coefficient");
-		title.setBounds(28,35, 360, 100);
-		title.setFont(new Font("Note this", Font.PLAIN, 25));
+		title.setBounds(60,40, 360, 100);
+		title.setFont(new Font("Freestyle Script", Font.PLAIN, 32));
 		this.add(title);
 		JLabel title2 = new JLabel("Mark&Vous");
-		title2.setBounds(100,1, 360, 100);
-		title2.setFont(new Font("Note this", Font.PLAIN, 28));
+		title2.setBounds(120,1, 360, 100);
+		title2.setFont(new Font("Freestyle Script", Font.PLAIN, 38));
 		this.add(title2);
 		
 		this.coefInput=new JTextField();
@@ -62,6 +86,11 @@ public class EntryCoefDialog extends JDialog implements ActionListener {
 		
 	}
 
+	/**
+	 * Boolean which check is float or not
+	 * @param text
+	 * @return true: is float, false: is not float -> exception
+	 */
 	private boolean isFloat(String text) {
 		try {
 			Float.parseFloat(text);
@@ -71,6 +100,9 @@ public class EntryCoefDialog extends JDialog implements ActionListener {
 		}
 	}
 	
+	/** Getter of coefficient
+	 * @return coef
+	 */
 	public Float getCoef() {
 		return this.coef;
 	}

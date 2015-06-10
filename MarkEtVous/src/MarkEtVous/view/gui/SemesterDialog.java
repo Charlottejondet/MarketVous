@@ -12,15 +12,41 @@ import javax.swing.JLabel;
 
 import MarkEtVous.model.SpinneretType;
 
+/**
+ * @author Jondet Guezel Coste Litzenburger
+ *
+ */
 public class SemesterDialog extends JDialog implements ActionListener{
 
+	/**
+	 * Serial version UID
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Jcombobox of semester 
+	 */
 	private JComboBox<Object> semester;
+	/**
+	 * Jbutton validate
+	 */
 	private JButton validate;
+	/**
+	 * Jbutton close
+	 */
 	private JButton close;
+	/**
+	 * Tyoe of spinneret
+	 */
 	private SpinneretType type;
+	/**
+	 * File 
+	 */
 	private File file;
 	
+	/**
+	 * Constructor of Semester dialog which allows to chose semester according to spinneret
+	 * @param type
+	 */
 	public SemesterDialog(SpinneretType type) {
 		this.type=type;
 		this.setModal(true);
@@ -31,12 +57,12 @@ public class SemesterDialog extends JDialog implements ActionListener{
 		
 		this.setLayout(null);
 		JLabel title = new JLabel("Veuillez choisir votre semestre");
-		title.setBounds(28,35, 360, 100);
-		title.setFont(new Font("Note this", Font.PLAIN, 25));
+		title.setBounds(60,40, 360, 100);
+		title.setFont(new Font("Freestyle Script", Font.PLAIN, 32));
 		this.add(title);
 		JLabel title2 = new JLabel("Mark&Vous");
-		title2.setBounds(100,1, 360, 100);
-		title2.setFont(new Font("Note this", Font.PLAIN, 28));
+		title2.setBounds(120,1, 360, 100);
+		title2.setFont(new Font("Freestyle Script", Font.PLAIN, 38));
 		this.add(title2);
 		
 		Object[] semesterList = new Object[]{"Semestre 1","Semestre 2", "Semestre 3", "Semestre 4"};
@@ -54,6 +80,10 @@ public class SemesterDialog extends JDialog implements ActionListener{
 		this.add(this.close);
 	}
 	
+	/**
+	 * Getter of semester
+	 * @return files
+	 */
 	public File getSemester() {
 		return this.file;
 	}

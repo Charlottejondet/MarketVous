@@ -12,7 +12,7 @@ import MarkEtVous.view.gui.MenuMarketVous;
 
 /**
  * Launch the application Mark&Vous
- * @author guezelc
+ * @author Jondet Guezel Coste Litzenburger
  *
  */
 public class Main {

@@ -9,18 +9,19 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class BackgroundPanel extends JPanel {
+	
 	/**
 	 * SerialVersionUID.
 	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Image of the calendar.
+	 * Image of the background.
 	 */
 	private Image img;
 
 	/**
-	 * Put the calendar image in JPanel.
+	 * Put the background image in JPanel.
 	 */
 	public void paintComponent(Graphics g)
 	{

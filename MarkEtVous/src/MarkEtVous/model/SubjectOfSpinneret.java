@@ -7,16 +7,32 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Jondet Guezel Coste Litzenburger
+ *
+ */
 public class SubjectOfSpinneret
 
 {
+	/**
+	 * File of spinneret type
+	 */
 	private final File typeOfSpinneret;
 
+	/**
+	 * Constructor of subjectOfSpinneret
+	 * @param type
+	 */
 	public SubjectOfSpinneret(File type) 
 	{
 		this.typeOfSpinneret=type; 
 	}
 	
+	/**
+	 * List of subject wich read files of subjects for each spinneret and each semester
+	 * @returnlist of subject
+	 * @throws IOException
+	 */
 	public List<Subject> readSubjects() throws IOException{
 		
 		List<Subject> listOfSubjects = new ArrayList<Subject>();
