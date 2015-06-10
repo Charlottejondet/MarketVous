@@ -13,17 +13,17 @@ import javax.swing.JPanel;
 
 public class WindowMarketVous extends JFrame 
 {
-	 static JButton button1 = new JButton("RT");
-	 static JButton button2 = new JButton("INFO");
-	 static JButton button3 = new JButton("GEA");
-	 static JButton button4 = new JButton("TC");
+	private JButton button1 = new JButton("RT");
+	private JButton button2 = new JButton("INFO");
+	private JButton button3 = new JButton("GEA");
+	private JButton button4 = new JButton("TC");
 
 	public WindowMarketVous()
 	{
 		
 		
-		this.setTitle("MarketVous");
-		this.setSize(900, 500);
+		this.setTitle("Mark&Vous");
+		this.setSize(600, 700);
 		this.setVisible(true);
 		JPanel background= new JPanel();
 		background.setBackground(Color.WHITE);

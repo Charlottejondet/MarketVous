@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import MarkEtVous.model.Mark;
+import MarkEtVous.model.MarketVous;
 import MarkEtVous.model.Spinneret;
 import MarkEtVous.model.Subject;
 import MarkEtVous.model.SpinneretType;
@@ -41,19 +42,6 @@ public class ConsoleIHM implements IHM
 			return entryCoef();
 		}
 		
-	}
-
-	@Override
-	public float entryMark() 
-	{
-		sc = new Scanner(System.in);
-		System.out.println("entrez la note");
-		try {
-			float str = sc.nextFloat();
-			return str;
-		} catch (Exception e){
-			return entryMark();
-		}		
 	}
 
 	@Override
@@ -126,7 +114,7 @@ public class ConsoleIHM implements IHM
 
 
 	@Override
-	public void displaySummaryOfAverage() {
+	public void displaySummaryOfAverage(Spinneret spinneret) {
 
 		
 		
@@ -260,6 +248,28 @@ public class ConsoleIHM implements IHM
 	public void displayListOfMarksWithSubjects(ArrayList<Subject> listOfSubject) {
 		// TODO Auto-generated method stub
 		
+	}
+
+
+
+	@Override
+	public void initWindow(MarketVous application) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public float entryMark(Subject subject) {
+		sc = new Scanner(System.in);
+		System.out.println("entrez la note");
+		try {
+			float str = sc.nextFloat();
+			return str;
+		} catch (Exception e){
+			return entryMark(subject);
+		}	
 	}
 	
 	

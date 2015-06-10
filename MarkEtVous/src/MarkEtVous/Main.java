@@ -6,7 +6,8 @@ import javax.swing.SwingUtilities;
 import MarkEtVous.model.MarketVous;
 import MarkEtVous.view.IHM;
 import MarkEtVous.view.console.ConsoleIHM;
-import MarkEtVous.view.gui.WindowMarketVous;
+import MarkEtVous.view.gui.MenuMarketVous;
+
 
 
 /**
@@ -16,15 +17,14 @@ import MarkEtVous.view.gui.WindowMarketVous;
  */
 public class Main {
 
-	private static WindowMarketVous fenetre;
-
 	public static void main(String[] args) 
-	{	    
-		IHM myIHM = new ConsoleIHM();
+	{	 
+		IHM myIHM = new MenuMarketVous();
 		new MarketVous(myIHM);
-		fenetre = new WindowMarketVous();	
 		MarketVous application = new MarketVous(myIHM);
-		application.start();
+		myIHM.initWindow(application);
+		SwingUtilities.invokeLater((Runnable) myIHM);
+		
 	}
 
 }

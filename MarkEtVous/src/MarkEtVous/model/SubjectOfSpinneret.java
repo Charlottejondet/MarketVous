@@ -28,7 +28,7 @@ public class SubjectOfSpinneret
 				String[] subjects = readText.split("/");
 				for (int index = 0; index < subjects.length; index++)
 				{
-					String[] subject = subjects[index].split(",");
+					String[] subject = subjects[index].split("%");
 					String title = subject[0];
 					String coef = subject[1];
 					listOfSubjects.add(new Subject(title,Float.parseFloat(coef)));

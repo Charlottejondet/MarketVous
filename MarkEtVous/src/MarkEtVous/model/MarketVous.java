@@ -25,16 +25,23 @@ public class MarketVous
 		File fileSpinneret = this.myIHM.inputSemester(choosenSpinneret);
 		
 			this.spinneret= new Spinneret(choosenSpinneret, fileSpinneret);
-			for (Subject currentSubject : this.spinneret.getListOfSubject()) 
+			int index =0;
+			for (index=0; index < this.spinneret.getListOfSubject().size();index++) 
 			{
-				this.inputMarks(currentSubject);
-				this.myIHM.displayListOfMarks(currentSubject.getListOfMark());			
+				Subject currentSubject = this.spinneret.getListOfSubject().get(index);
+				if(!this.inputMarks(currentSubject))
+					break;
+				this.myIHM.displayListOfMarks(currentSubject.getListOfMark());	
+					
 			}
-			this.myIHM.displayListOfMarksWithSubjects(this.spinneret.getListOfSubject());
+			if (index ==this.spinneret.getListOfSubject().size()) {
+				this.myIHM.displayListOfMarksWithSubjects(this.spinneret.getListOfSubject());
+				this.calculateAverage();
+			}
+
 		}
 	}
 		
-	
 	
 	public void calculateAverage()
 	{
@@ -44,7 +51,7 @@ public class MarketVous
 		}
 		
 		this.calculateGeneralAverage();
-		this.myIHM.displaySummaryOfAverage();
+		this.myIHM.displaySummaryOfAverage(this.spinneret);
 		
 	}
 	
@@ -83,15 +90,28 @@ public class MarketVous
 		
 	}
 
-	private void inputMarks(Subject subject) 
+	private boolean inputMarks(Subject subject) 
 	{
 		boolean continueInput = true;
 		while (continueInput) 
 		{
 			this.myIHM.displaySubject(subject);
-			subject.addMark(this.myIHM.entryMark(),this.myIHM.entryCoef());
-			continueInput = this.myIHM.askContinue();
+			Float mark = this.myIHM.entryMark(subject);
+			if (mark.compareTo(new Float("0.0"))>0) {
+				Float coef = this.myIHM.entryCoef();
+				if (coef.compareTo(new Float("0.0"))>0){
+					subject.addMark(mark,coef);
+					continueInput = this.myIHM.askContinue();
+				}
+				else {
+					return false;
+				}
+			}
+			else {
+				return false;
+			}
 		}
+		return true;
 	}
 
 	public void start() {
@@ -100,9 +120,6 @@ public class MarketVous
 			this.addMarks();
 		}
 		if (choice==2){
-			this.calculateAverage();
-		}
-		if (choice ==3){
 			System.exit(0);
 		}
 		else 

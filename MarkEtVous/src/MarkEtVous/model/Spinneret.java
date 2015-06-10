@@ -82,4 +82,25 @@ public class Spinneret
 		this.listOfAverageBySubject = listOfAverageBySubject;
 	}
 	
+	public static String displayListOfMarks(List<Mark> list) {
+		StringBuilder str = new StringBuilder();
+		for (Mark mark : list) {
+			str.append(mark.getMark()+" ("+mark.getCoefficient()+")");
+			str.append("\n");
+		}
+		return str.toString();
+	}
+
+
+	public static String displayListOfMarksWithSubject(
+			List<Subject> listOfSubject) {
+		StringBuilder str = new StringBuilder();
+		for (Subject subject : listOfSubject) {
+			str.append(subject.getSubjectname()+": \n");
+			str.append(Spinneret.displayListOfMarks(subject.getListOfMark()));
+			str.append("\n");
+		}
+		return str.toString();
+	}
+	
 }

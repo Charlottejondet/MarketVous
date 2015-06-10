@@ -22,7 +22,7 @@ public class Mark
 	}
 
 	public float getMark() {
-		return mark;
+		return this.mark;
 	}
 
 	public void setMark(float mark) {
